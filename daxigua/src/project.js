@@ -987,9 +987,9 @@ window.__require = function e(t, n, o) {
                         scale: .9
                     }).union().repeatForever().start()
                 }, t.prototype.update = function(e) {}, t.prototype.adsButtonFunc2 = function() {
-                    window.location.href = "https://www.qwas.top"
+                    window.location.href = "https://stand-myheroes.com/"
                 }, t.prototype.bannerButtonFunc = function() {
-                    window.location.href = "https://www.qwas.top"
+                    window.location.href = "https://stand-myheroes.com/"
                 }, t.prototype.ShowFailedUi = function(e, t) {
                     var n = this;
                     this.scheduleOnce(function() {
@@ -1007,7 +1007,7 @@ window.__require = function e(t, n, o) {
                     this.canClick && 0 == cc.find("Canvas/uiEffectPanel").childrenCount && a.default.Instance.RestartGame()
                 }, t.prototype.OnClickMoreGame = function() {
                     this.canClick && (this.moreGameBtn.off(cc.Node.EventType.TOUCH_START, this.OnClickMoreGame, this), this.canClick = !1, this.moreGameBtn.runAction(cc.sequence(cc.scaleTo(.1, 1.1), cc.scaleTo(.1, 1))), this.scheduleOnce(function() {
-                        window.location.href = "http://dxg.qwas.top"
+                        window.location.href = "https://stand-myheroes.com/"
                     }, .15))
                 }, t.prototype.GetContentByScore = function(e) {
                     var t = Math.ceil(e / 1500 * 94);
@@ -1153,7 +1153,7 @@ window.__require = function e(t, n, o) {
                 }, t.prototype.createOneFruit = function(e) {
                     var t = this,
                         n = cc.instantiate(this.fruitPre);
-                    n.parent = this.lineNode, n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.getComponent("fruitData").fruitNumber = e, n.position = this.lineNode.children[1].position, n.scale = 0, n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static, n.getComponent(cc.PhysicsCircleCollider).radius = 0, n.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(n).to(.5, {
+                    n.parent = this.lineNode, n.getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.children[0].getComponent(cc.Sprite).spriteFrame = d.default.Instance.fruit[e], n.getComponent("fruitData").fruitNumber = e, n.position = this.lineNode.children[1].position, n.scale = 0, n.getComponent(cc.RigidBody).type = cc.RigidBodyType.Static, n.getComponent(cc.PhysicsCircleCollider).radius = 0, n.getComponent(cc.PhysicsCircleCollider).restitution = 0.1, n.getComponent(cc.PhysicsCircleCollider).apply(), cc.tween(n).to(.5, {
                         scale: 1
                     }, {
                         easing: "backOut"
@@ -1732,7 +1732,7 @@ window.__require = function e(t, n, o) {
         var o = {
             goToCover: function(e, t, n, o, c) {
                 var a = e;
-                a = null == a || void 0 == a || e, console.log("LoadBoolBeforeLoadS", a), this.needShow = !1, a && a ? (this.needShow = !0, showMyAds()) : this.needShow = !1, this.needShow ? (void 0 == preloader && this.startGoToGame(n, o, c), resCompleteFlag = !0, adCompleteFlag && resCompleteFlag && this.startGoToGame(n, o, c)) : this.startGoToGame(n, o, c)
+                a = null == a || void 0 == a || e, console.log("LoadBoolBeforeLoadS", a), this.needShow = !1, a && a ? (this.needShow = !0) : this.needShow = !1, this.needShow ? (void 0 == preloader && this.startGoToGame(n, o, c), resCompleteFlag = !0, adCompleteFlag && resCompleteFlag && this.startGoToGame(n, o, c)) : this.startGoToGame(n, o, c)
             },
             startGoToGame: function(e, t, n) {
                 console.log("goToScene"), noAdGoToScene()
@@ -1817,7 +1817,7 @@ window.__require = function e(t, n, o) {
                 cc.find("Canvas/adsLayer").active = !0, cc.find("Canvas/adsLayer").setContentSize(cc.winSize.width, cc.winSize.height)
             },
             AdsLink: function() {
-                window.location.href = "https://qwas.top"
+                window.location.href = "https://stand-myheroes.com/"
             },
             closeAdsLayer: function() {
                 cc.find("Canvas/adsLayer").active = !1
@@ -1906,7 +1906,7 @@ window.__require = function e(t, n, o) {
                 }, t.prototype.update = function(e) {
                     this.UpdateScoreLabel(e), this.lerpCtrl && this.lerpNumFunc(this.passlevelYQ), this.levelPanel.children[1].getComponent(cc.Label).string = s.default.Instance.GetLevel().toString()
                 }, t.prototype.adsButtonFunc = function() {
-                    window.location.href = "https://qwas.top"
+                    window.location.href = "https://stand-myheroes.com/"
                 }, t.prototype.TestPasslevel = function() {
                     var e = this;
                     this.lerpCtrl = !0, this.nowYQ >= this.passlevelYQ && (this.levelPanel.children[2].runAction(cc.sequence(cc.delayTime(1.3), cc.callFunc(function() {
@@ -2091,7 +2091,7 @@ window.__require = function e(t, n, o) {
                     else {
                         if (adEndComplete = !1, resEndComplete = !1, this.needShow = null, 1 == window.navigator.onLine) {
                             var e = this.adShowAfter;
-                            console.log("ad", e), (e = null == e || void 0 == e || this.adShowAfter) ? (this.needShow = !0, console.log("showMyad"), showMyAds()) : this.needShow = !1
+                            console.log("ad", e), (e = null == e || void 0 == e || this.adShowAfter) ? (this.needShow = !0, console.log("showMyad")) : this.needShow = !1
                         } else console.log("showOver1"), this.showGameEndLayer(), this.needShow = null;
                         console.log("showMyad2", this.needShow), null != this.needShow && (console.log("showMyad3"), this.needShow ? (console.log("pre", preloader), void 0 == preloader && this.showGameEndLayer(), resEndComplete = !0, adEndComplete && resEndComplete && (console.log("showOver1"), this.showGameEndLayer())) : (console.log("gam"), this.showGameEndLayer()))
                     }
@@ -2100,7 +2100,7 @@ window.__require = function e(t, n, o) {
                     a.publicGameBool, this.showGameEndLayer()
                 },
                 showAd: function() {
-                    showMyAds()
+
                 },
                 showGameEndLayer: function() {
                     cc.find("Canvas/gameManager").getComponent("GameManager").GameOver()
